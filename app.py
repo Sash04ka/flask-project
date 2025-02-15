@@ -60,4 +60,3 @@ def delete_user(user_id):
 
 if __name__ == '__main__':
     app.run(debug=True)
-print(f"DATABASE_URL: {DATABASE_URL}")  # Временно для дебага
