@@ -4,6 +4,7 @@ from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
+
 # Проверяем, что DATABASE_URL установлен
 DATABASE_URL = os.getenv("DATABASE_URL")
 
@@ -59,3 +60,4 @@ def delete_user(user_id):
 
 if __name__ == '__main__':
     app.run(debug=True)
+print(f"DATABASE_URL: {DATABASE_URL}")  # Временно для дебага
