@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список пользователей</title>
+</head>
+<body>
+    <h2>Список пользователей</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Имя</th>
+            <th>Email</th>
+            <th>Действия</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user[0] }}</td>
+            <td>{{ user[1] }}</td>
+            <td>{{ user[2] }}</td>
+            <td><a href="/delete/{{ user[0] }}">Удалить</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Добавить нового пользователя</a>
+</body>
+</html>
